@@ -1,15 +1,15 @@
 const sequelize = require('sequelize')
 const connection = require('../databases/database')
 
-const cliente = connection.define(
-    'tbl_cliente',
+const filme = connection.define(
+    'tbl_filme',
     {
-        nome_cliente:{
+        nome_filme:{
             type:sequelize.STRING,
             allowNull:false
         }
     }
     
 )
-// cliente.sync({force:true});
-module.exports = cliente
+cliente.sync({force:true});
+module.exports = filme

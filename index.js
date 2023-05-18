@@ -1,6 +1,6 @@
 
 const express = require('express')
-const cliente = require('./model/clienteModel')
+
 const app = express()
 const port = 3000
 
@@ -11,6 +11,7 @@ app.use(express.urlencoded({extended:true}))
 
 const clienteController = require('./controller/clienteController')
 app.use('/',clienteController)
+
 
 app.listen(port, () => {
   console.log(`Servidor Rodando na porta ${port}`)
